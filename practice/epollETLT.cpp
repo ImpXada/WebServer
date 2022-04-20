@@ -22,8 +22,7 @@ struct fds
     int sockfd;
 };
 
-int
-setnonblocking(int fd)
+int setnonblocking(int fd)
 {
     int old_option=fcntl(fd,F_GETFL);
     int new_option=old_option|O_NONBLOCK;
